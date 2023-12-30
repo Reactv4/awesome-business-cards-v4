@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
+
+    <style>
+        body{
+            font-family: 'Arial';
+            margin: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+            margin-top: 30px;
+        }
+        .business-card{
+            background-color: #ffff;
+            display: flex;
+            flex-direction:column;
+            height: 530px;
+            width: 300px;
+            overflow:hidden;
+            border: 2px solid #349db3;
+            box-shadow: 0 4px 8px rgba(109, 101, 101, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out , border 0.3s ease-in-out;
+            position: relative;
+            animation: rotateBorderColor 10s infinite linear;
+        }
+        .profile-imge{
+            width: 100%;
+            height: 56%;
+        }
+
+        .header{
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .contact-info{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .name{
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .job-title {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .contact-details div{
+            margin-bottom: 5px;
+        }
+
+        .social_link {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .social_link a {
+            margin-right: 30px;
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        .business-card:hover {
+            transform:scale(1.1);
+            border: 4px solid blue;
+        }
+
+        .skill-card {
+            top:48px;
+            position: absolute;
+            background: rgba(255,255,255, 0.3);
+            width: 100%;
+            backdrop-filter: blur(40px);
+            height: 0%;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+        }
+
+        .skill-title {
+            margin-left: 30px;
+            font-size: 28px;
+            margin-top: 70px; 
+            font-weight: bold;
+        }
+
+        .skill-card ul {
+            margin-left: 30px;
+        }
+
+        .skill-card li {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .business-card:hover .skill-card {
+           height: 100%;
+        }
+
+        /*Add keyframes for rotating border color */
+        @keyframes rotateBorderColor {
+            0% {
+                box-shadow: 0 0 40px rgba(255, 0, 0, 0.5);
+            }
+            25% {
+                box-shadow: 0 0 40px rgba(255, 204, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 204, 0, 0.5);
+            }
+            75% {
+                box-shadow: 0 0 40px rgba(51, 153, 255, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 40px rgba(255, 204, 0, 0.5);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="business-card">
+        <div class="header">Business Card</div>
+        <div class="contact-info">
+            <img class="profile-imge" src="IMG1.jpeg" alt="" >
+            <div class="name">Chamith Sadeepa</div>
+            <div class="job-title">WEB & UI/UX Designer</div>
+            <div class="contact-details">
+                <div>Email : skchamith14@gmail.com</div>
+                <div>Phone : 076 721 7480 </div>
+                <div>Address : No 123,  ***********.</div>
+            </div>
+            <div class="social_link">
+                <a href="" class="hr">LinkdIn</a>
+                <a href="" class="h">Twitter</a>
+                <a href="" class="h">GitHub</a>
+            </div>
+        </div>
+
+            <div class="skill-card">
+                <div class="skill-title">My Skills</div>
+                <ul>
+                    <li>React Js</li>
+                    <li>Next Js</li>
+                    <li>Flutter</li>
+                    <li>Firebase</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
