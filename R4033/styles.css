@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.business-card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    position: relative;
+    animation: rotateBordercolor 5s linear 2s infinite alternate;
+
+}
+@keyframes rotateBordercolor{
+    0%   {border-color:   red; }
+    25%  {border-color:    yellow; }
+    50%  {border-color:    blue; }
+    75%  {border-color:    green; }
+    100% {border-color:    red; }
+}
+.profile-image{
+    width: 100%;
+    height: 50%;
+}
+.header{
+    background-color: #1b5dd6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+.contact-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-weight: bold;
+}
+.name{
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.job-title{
+    font-size: 1em;
+    color: #6b6a6a;
+    margin-bottom: 10px;
+}
+.contact-details div{
+    margin-bottom: 5px;
+
+}
+.social-links{
+    margin-top: 10px;
+}
+.social-links a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #1b5dd6;
+    
+}
+.business-card:hover{
+    transform: scale(1.05);
+    border: 4px solid rgb(59, 58, 58);
+    
+}
+.skill-card{
+    position: absolute;
+    background: rgba(255,255,255,0.3);
+    width: 100%;
+    backdrop-filter: blur(40px);
+    height: 100%;
+    top: 48px;
+    height: 0%;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+.skill-title{
+    margin-top: 70px;
+    margin-left: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.skill-card ul{
+    margin-left: 30px;
+}
+.skill-card li{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.business-card:hover .skill-card{
+    height: 82%;
+}
